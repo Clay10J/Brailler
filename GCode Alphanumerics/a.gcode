@@ -1,1 +1,4 @@
-G0
+%
+Oacode
+G00 G91 G80 G28 G17 G20 G40 G49
+G0 X1 Y0
