@@ -16,6 +16,9 @@ def write_speech_to_text():
 	text = s2t.speechToText()
 	printer.printBraille(text)
 
+def write_keyboard_text():
+	print("Keyboard Input Chosen")
+
 root = tk.Tk()
 root.title("Brailler")
 frame = tk.Frame(root)
@@ -32,6 +35,11 @@ pdfButton.pack(side=tk.LEFT)
 speechButton = tk.Button(frame, text="Speech-to-Text", command=write_speech_to_text)
 speechButton.pack(side=tk.LEFT)
 # End Speech to Text Button
+
+# Keyboard Input Button
+keyboardButton = tk.Button(frame, text="Keyboard Input", command=write_keyboard_text)
+keyboardButton.pack(side=tk.LEFT)
+# End Keyboard Input Button
 
 # Quit Button
 quitButton = tk.Button(frame, text="Quit", fg="red", command=quit)
