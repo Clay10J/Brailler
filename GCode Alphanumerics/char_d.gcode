@@ -9,5 +9,5 @@ G01 Z1
 G01 Y-2.4
 G01 Z-1
 G01 Z1
-(reset)
+(reset to original position)
 G01 Y2.4 X-2.4
