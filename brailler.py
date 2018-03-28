@@ -2,6 +2,7 @@ import tkinter as tk
 import speech2text as s2t
 import pdf2text as p2t 
 import braillePrint as printer
+import keyboardInput as keyboard
 # Uncomment line below and comment line above to run in python 2.X
 #import Tkinter as tk
 
@@ -18,6 +19,8 @@ def write_speech_to_text():
 
 def write_keyboard_text():
 	print("Keyboard Input Chosen")
+	text = keyboard.takeInput()
+	printer.printBraille(text)
 
 root = tk.Tk()
 root.title("Brailler")
