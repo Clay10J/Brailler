@@ -18,8 +18,24 @@ def write_speech_to_text():
 
 def write_keyboard_text():
 	print("Keyboard Input Chosen")
-	text = keyboard.takeInput()
+	text = make_keyboard_input_window()
+	#text = keyboard.takeInput()
 	printer.printBraille(text)
+
+def make_keyboard_input_window():
+	window = tk.Toplevel(root)
+	textEntry = tk.Entry(window)
+	textEntry.pack()
+	waitVar = tk.IntVar()
+	submitButton = tk.Button(window, text = "Submit", command = lambda: waitVar.set(1))
+	submitButton.pack()
+	# Test print
+	print("waiting on text input...")
+	submitButton.wait_variable(waitVar)
+	print("done waiting")
+	text = textEntry.get()
+	window.destroy()
+	return text
 
 root = tk.Tk()
 root.title("Brailler")
