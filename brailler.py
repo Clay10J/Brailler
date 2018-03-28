@@ -10,7 +10,6 @@ def write_pdf_to_text():
 	text = p2t.pdfToText()
 	printer.printBraille(text)
 	
-
 def write_speech_to_text():
 	print("Speech to Text Chosen")
 	text = s2t.speechToText()
@@ -18,6 +17,8 @@ def write_speech_to_text():
 
 def write_keyboard_text():
 	print("Keyboard Input Chosen")
+	text = s2t.speechToText()
+	printer.printBraille(text)
 
 root = tk.Tk()
 root.title("Brailler")
