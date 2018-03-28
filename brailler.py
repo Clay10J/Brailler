@@ -3,7 +3,7 @@ import speech2text as s2t
 import pdf2text as p2t 
 import braillePrint as printer
 import keyboardInput as keyboard
-# Uncomment line below and comment line above to run in python 2.X
+# Uncomment line below and comment first line to run in python 2.X
 #import Tkinter as tk
 
 def write_pdf_to_text():
