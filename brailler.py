@@ -1,13 +1,20 @@
 import tkinter as tk
-
+import speech2text as s2t
+import pdf2text as p2t 
+import braillePrint as printer
 # Uncomment line below and comment line above to run in python 2.X
 #import Tkinter as tk
 
 def write_pdf_to_text():
 	print("PDF to Text Chosen")
+	text = p2t.pdfToText()
+	printer.printBraille(text)
+	
 
 def write_speech_to_text():
 	print("Speech to Text Chosen")
+	text = s2t.speechToText()
+	printer.printBraille(text)
 
 root = tk.Tk()
 root.title("Brailler")
