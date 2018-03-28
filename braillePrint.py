@@ -3,7 +3,15 @@ def printBraille(text):
 	for letter in text:
 		print ("Printing character " + letter + '\n')
 		#Call PyCNC script on corresponding character file
-		if (letter != "\ " or letter != "\n"):
+		if ((not letter.isalpha()) and (not letter.isdigit()) and (letter not in ["?",".",",","#","!"," "])):
+			print ("Character not printable!")
+			return
+		if ((letter != " ") or (letter != "\n")):
 			command = "./pycnc " + "char_" + letter + ".gcode"
-		elif (letter == 
+		elif (letter == " "):
+			command = "./pycnc space.gcode" 
+		elif (letter == "\n"):
+			command = "./pycnc newline.gcode"
+		print("Executing command: " + command + "\n")
+	return
 	
