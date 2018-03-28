@@ -14,5 +14,5 @@ def printBraille(text):
 			command = "./pycnc newline.gcode"
 		print("Executing command: " + command + "\n")
 
-	print("Finished Printing. Waiting on new command...")
+	print("Finished Printing. Waiting on new command...\n")
 	return
