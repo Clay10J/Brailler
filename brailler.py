@@ -29,8 +29,8 @@ def write_keyboard_text():
 
 def make_keyboard_input_window():
 	window = tk.Toplevel(root)
-	textEntry = tk.Entry(window)
-	textEntry.pack()
+	inputText = tk.Text(window)
+	inputText.pack()
 	waitVar = tk.IntVar()
 	submitButton = tk.Button(window, text = "Submit", command = lambda: waitVar.set(1))
 	submitButton.pack()
@@ -38,7 +38,7 @@ def make_keyboard_input_window():
 	print("waiting on text input...")
 	submitButton.wait_variable(waitVar)
 	print("done waiting")
-	text = textEntry.get()
+	text = inputText.get("1.0", "end-1c")
 	window.destroy()
 	return text
 
