@@ -13,8 +13,8 @@ def write_pdf_to_text():
 	#filepath = "C:/Users/Ryan Schreiber/Desktop/School/CSCE 483/pytesseract demo/test1.JPG"
 	filename = filedialog.askopenfilename(filetypes = (("JPG files", "*.jpg;*.jpeg")
                                                          ,("PNG files", "*.png")
-                                                         ,("PDF files", "*.pdf*") ))
-	text = p2t.pdfToText(filepath)
+                                                         ,("PDF files", "*.pdf") ))
+	text = p2t.pdfToText(filename)
 	printer.printBraille(text)
 	
 def write_speech_to_text():
