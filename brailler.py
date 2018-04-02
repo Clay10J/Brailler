@@ -8,7 +8,8 @@ import keyboardInput as keyboard
 
 def write_pdf_to_text():
 	print("PDF to Text Chosen")
-	text = p2t.pdfToText()
+	filepath = "C:/Users/Ryan Schreiber/Desktop/School/CSCE 483/pytesseract demo/test1.JPG"
+	text = p2t.pdfToText(filepath)
 	printer.printBraille(text)
 	
 def write_speech_to_text():
