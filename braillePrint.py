@@ -3,7 +3,7 @@ def printBraille(text):
 	for letter in text:
 		print ("Printing character " + letter + '\n')
 		#Call PyCNC script on corresponding character file
-		if ((not letter.isalpha()) and (not letter.isdigit()) and (letter not in ["?",".",",","#","!"," "])):
+		if ((not letter.isalpha()) and (not letter.isdigit()) and (letter not in ["?",".",",","#","!"," ","\n","\t",":",";"])):
 			print ("Character not printable!")
 			return
 		if ((letter != " ") or (letter != "\n")):
