@@ -11,7 +11,7 @@ import keyboardInput as keyboard
 def write_pdf_to_text():
 	print("PDF to Text Chosen")
 	#filepath = "C:/Users/Ryan Schreiber/Desktop/School/CSCE 483/pytesseract demo/test1.JPG"
-	filename = filedialog.askopenfilename(filetypes = (("JPG files", "*.jpg;*.jpeg")
+	filename = filedialog.askopenfilename(filetypes = (("JPG files", ("*.jpg","*.jpeg"))
                                                          ,("PNG files", "*.png")
                                                          ,("PDF files", "*.pdf") ))
 	text = p2t.pdfToText(filename)
