@@ -36,7 +36,7 @@ if not everythingIsWorking:
 ## The main function that we will be using to convert images to strings.
 def pdfToText(filepath):
     imageObject = Image.open(filepath)
-    output = pytesseract.image_to_str(imageObject)
+    output = pytesseract.image_to_string(imageObject)
     return (output)
 
 
