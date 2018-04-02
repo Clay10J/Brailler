@@ -48,26 +48,22 @@ welcomeLabel.config(font = ("System", 36))
 welcomeLabel.pack(side = tk.TOP)
 
 # PDF to Text Button
-pdfButton = tk.Button(frame, text = "PDF-to-Text", command = write_pdf_to_text)
-pdfButton.config(font = ("System", 20))
+pdfButton = tk.Button(frame, text = "PDF-to-Text", font = ("System", 20), command = write_pdf_to_text)
 pdfButton.pack(side = tk.LEFT)
 # End PDF to Text Button
 
 # Speech to Text Button
-speechButton = tk.Button(frame, text = "Speech-to-Text", command = write_speech_to_text)
-speechButton.config(font = ("System", 20))
+speechButton = tk.Button(frame, text = "Speech-to-Text", font = ("System", 20), command = write_speech_to_text)
 speechButton.pack(side = tk.LEFT)
 # End Speech to Text Button
 
 # Keyboard Input Button
-keyboardButton = tk.Button(frame, text = "Keyboard Input", command = write_keyboard_text)
-keyboardButton.config(font = ("System", 20))
+keyboardButton = tk.Button(frame, text = "Keyboard Input", font = ("System", 20), command = write_keyboard_text)
 keyboardButton.pack(side = tk.LEFT)
 # End Keyboard Input Button
 
 # Quit Button
-quitButton = tk.Button(frame, text = "Quit", fg = "red", command = quit)
-quitButton.config(font = ("System", 20))
+quitButton = tk.Button(frame, text = "Quit", font = ("System", 20), fg = "red", command = quit)
 quitButton.pack(side = tk.LEFT)
 # End Quit Button
 
