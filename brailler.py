@@ -39,6 +39,7 @@ def make_keyboard_input_window():
 
 root = tk.Tk()
 root.title("Brailler")
+root.attributes("-fullscreen", True)
 frame = tk.Frame(root)
 frame.pack()
 
