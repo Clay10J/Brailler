@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter.filedialog import askopenfilename
 import speech2text as s2t
 import pdf2text as p2t 
 import braillePrint as printer
@@ -8,7 +9,9 @@ import keyboardInput as keyboard
 
 def write_pdf_to_text():
 	print("PDF to Text Chosen")
-	text = p2t.pdfToText()
+	#filename =askopenfilename(initialdir="C:",filetypes =(("PDF File", "*.pdf")),title = "Choose a file.")
+	filename = "/home/joi/Documents/314"
+	text = p2t.pdfToText(filename)
 	printer.printBraille(text)
 	
 def write_speech_to_text():
