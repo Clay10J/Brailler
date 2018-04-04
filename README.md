@@ -21,7 +21,10 @@
 		 - sudo apt-get install python-pyaudio python3-pyaudio
 		 - (?) sudo apt-get install google-api-python-client
  - Install PDF2Text Compatability
-	 - TODO: ADD PYTESSERACT INSTALLATION
+ 	 - MacOS
+		 - brew install tesseract --all-languages
+		 - brew install leptonica
+		 - pip3 install tesseract-ocr
  - PyCNC
 	 - TODO: ADD THIS PART
  - Download Project Files to Raspberry Pi
