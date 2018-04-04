@@ -21,14 +21,18 @@
 		 - sudo apt-get install python-pyaudio python3-pyaudio
 		 - (?) sudo apt-get install google-api-python-client
  - Install PDF2Text Compatability
- 	 - MacOS
+ 	 - Windows (TODO)
+ 	 - MacOS (Not tested from virutalEnv yet)
 		 - brew install tesseract --all-languages
 		 - brew install leptonica
 		 - pip3 install tesseract-ocr
+	 - Linux
+	 	 - TODO
  - PyCNC
 	 - TODO: ADD THIS PART
  - Download Project Files to Raspberry Pi
 	 - TODO: ADD THIS PART
+	 - TODO: Add I/O Support for buttons????
  - Configure Raspberry Pi Bootup to automatically run the project files
 	- TODO: ADD THIS PART
 
