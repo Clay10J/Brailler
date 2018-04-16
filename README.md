@@ -1,4 +1,4 @@
-## **Brailler**
+﻿## **Brailler**
 
 **Setting up the Raspberry Pi**
 
@@ -18,8 +18,10 @@
 		 - pip3 install google-api-python-client
 	 - Linux
 		 - (?)sudo apt-get install SpeechRecognition
+		 - pip3 install SpeechRecognition
 		 - sudo apt-get install python-pyaudio python3-pyaudio
 		 - (?) sudo apt-get install google-api-python-client
+		 - pip3 install google-api-python-client
  - Install PDF2Text Compatability
  	 - Windows (TODO)
  	 - MacOS (Not tested from virutalEnv yet)
