@@ -30,7 +30,8 @@
 		 - brew install leptonica
 		 - pip3 install tesseract-ocr
 	 - Linux
-	 	 - TODO
+	 	 - pip3 install pytesseract
+		 - sudo apt-get install tesseract-ocr
  - PyCNC
 	 - TODO: ADD THIS PART
  - Download Project Files to Raspberry Pi
