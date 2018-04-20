@@ -5,10 +5,13 @@ import speech_recognition as sr
 def captureAudioToText():
     # obtain audio from the microphone
     r = sr.Recognizer()
-    r.energy_threshold = 4000
+    r.energy_threshold = 1000
+    r.pause_threshold = 0.8
+    r.dynamic_energy_theshold = True
+    r.dynamic_energy_adjustment_damping = 0.5
 
     with sr.Microphone() as source:
-        r.adjust_for_ambient_noise(source, duration = 1)
+      #  r.adjust_for_ambient_noise(source, duration = 1)
         print("Say something!")
         audio = r.listen(source)
 
