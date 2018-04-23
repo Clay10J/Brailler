@@ -5,6 +5,9 @@ import speech2text as s2t
 import pdf2text as p2t 
 import braillePrint as printer
 import keyboardInput as keyboard
+import RPi.GPIO as GPIO
+import time
+import threading
 # Uncomment line below and comment first line to run in python 2.X
 #import Tkinter as tk
 
@@ -87,5 +90,11 @@ quitButton = tk.Button(frame, text = "Quit", font = ("System", 20), fg = "red", 
 quitButton.grid(row = 12, column = 9, columnspan = 3, sticky = tk.N + tk.S + tk.E + tk.W)
 # End Quit Button
 
+
+#GPIO Setup
+GPIO.setmode(GPIO.BOARD)
+BTN = 31 #GPIO06
+GPIO.setup([BTN], GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.add_event_detect(BTN, GPIO.BOTH, write_speech_to_text)
 
 root.mainloop()
