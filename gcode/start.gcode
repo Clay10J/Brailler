@@ -1,10 +1,11 @@
 ;make sure to start in the top left corner!
-g91
+g90
 g21
-g1z2.5
+g1z3
 g4P1
-g1x13.79
+g1x13.8
 g4P1
-g1y.49
+g1y.48
+
 
 

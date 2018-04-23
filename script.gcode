@@ -1,18 +1,23 @@
 ;make sure to start in the top left corner!
-g91
+g90
 g21
-g1z2.5
+g1z3
 g4P1
-g1x13.79
+g1x13.8
 g4P1
-g1y.49
+g1y.48
 
 
-;a begin
+
+;b begin
 g91
-z-1.59
-z1.59
-;a end
+z-2.4
+z2.4
+y.08
+z-2.4
+z2.4
+;b end
+
 
 ;end begin
 g90
