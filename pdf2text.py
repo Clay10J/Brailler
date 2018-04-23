@@ -6,6 +6,7 @@
 
 from os import system,listdir,getcwd,remove
 import sys
+from tika import parser
 
 sys.path.append("C:\Program Files (x86)\Tesseract-OCR")
 
@@ -40,25 +41,18 @@ if not everythingIsWorking:
 def pdfToText(filepath):
     imageObject = None
     if filepath.split(".")[-1] == "pdf":
-        tempPath     = convertPDFtoJPG(filepath)
-        stringOutput = ""
-
-        for file in listdir(tempPath):
-            print(tempPath+file)
-            imageObject  = Image.open(tempPath+file)
-            stringOutput += pytesseract.image_to_string(imageObject)
-            imageObject.close()
-            remove(tempPath+file)
-        
-        return stringOutput
+        return convertPDFtoText(filepath)
     imageObject = Image.open(filepath)
     output = pytesseract.image_to_string(imageObject)
     return (output)
 
-def convertPDFtoJPG(filepath):
-    dst = '"'+getcwd().replace("\\","/")+"/tmp/"+'"'
-    system("2jpeg -src "+filepath+" -dst "+dst)
-    return dst.replace('"',"")
+def convertPDFtoText(filepath):
+    print("converting pdf to text...")
+    parsed = parser.from_file(filepath)
+    content = parsed["content"]
+    while "\n\n" in content:
+        content = content.replace("\n\n","\n")
+    return content
 
 
 

@@ -3,3 +3,4 @@ def makeScript(filenames):
             for fname in filenames:
                      with open(fname) as infile:
                                      outfile.write(infile.read())
+    return True
