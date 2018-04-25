@@ -8,7 +8,7 @@ def printBraille(text):
         for letter in text:
             i += 1
             #Check if we need to go to a newline
-            if (i % 31 == 0):
+            if (i % 17 == 0):
                 filesToConcatenate.append("gcode/newline.gcode")
                 #j += 1
                 i = 0
@@ -19,18 +19,31 @@ def printBraille(text):
                 #filesToConcatenate.append("gcode/readjustx.gcode")
             print("Printing character " + letter + '\n')
             #Call PyCNC script on corresponding character file
-            if ((not letter.isalpha()) and (not letter.isdigit()) and (letter not in ["?",".",",","#","!"," ","\n","\t",":",";"])):
+            if (letter.isupper()):
+                filesToConcatenate.append("gcode/uppercase.gcode")
+                filesToConcatenate.append("gcode/space.gcode")
+                i += 1
+            if ((not letter.isalpha()) and (not letter.isdigit()) and (letter not in ["?",".",",","!"," ","\n","\t",":",";","-","'"])):
                     print("Character not printable!")
-            elif (letter in ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","!","#","?",":",";"]):
+            elif (letter.lower() in ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","!","#","?",":",";"]):
                 filesToConcatenate.append("gcode/char_"+letter+".gcode")
                 filesToConcatenate.append("gcode/space.gcode")
             elif (letter == " "):
                 filesToConcatenate.append("gcode/space.gcode")
             elif (letter == "."):
-                filesToConcatenate.append("gcode/dot.gcode")
+                filesToConcatenate.append("gcode/char_period.gcode")
                 filesToConcatenate.append("gcode/space.gcode")
             elif (letter == ","):
-                filesToConcatenate.append("gcode/comma.gcode")
+                filesToConcatenate.append("gcode/char_comma.gcode")
+                filesToConcatenate.append("gcode/space.gcode")
+            elif (letter == "?"):
+                filesToConcatenate.append("gcode/char_questions.gcode")
+                filesToConcatenate.append("gcode/space.gcode")
+            elif (letter == "-"):
+                filesToConcatenate.append("gcode/char_hyphen.gcode")
+                filesToConcatenate.append("gcode/space.gcode")
+            elif (letter == "'"):
+                filesToConcatenate.append("gcode/char_apostraphe.gcode")
                 filesToConcatenate.append("gcode/space.gcode")
             elif (letter == "\t"):
                 for k in range(4):

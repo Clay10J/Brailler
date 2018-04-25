@@ -94,9 +94,9 @@ quitButton.grid(row = 12, column = 9, columnspan = 3, sticky = tk.N + tk.S + tk.
 # End Quit Button
 
 #GPIO Setup
-GPIO.setmode(GPIO.BOARD)
-BTN = 31 #GPIO06
-GPIO.setup([BTN], GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.add_event_detect(BTN, GPIO.BOTH, handle_speech_to_text)
+#GPIO.setmode(GPIO.BOARD)
+#BTN = 31 #GPIO06
+#GPIO.setup([BTN], GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+#GPIO.add_event_detect(BTN, GPIO.BOTH, handle_speech_to_text)
 
 root.mainloop()
