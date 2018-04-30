@@ -8,7 +8,7 @@ def printBraille(text):
         for letter in text:
             i += 1
             #Check if we need to go to a newline
-            if (i % 17 == 0):
+            if (i % 14 == 0):
                 filesToConcatenate.append("gcode/newline.gcode")
                 #j += 1
                 i = 0
@@ -49,7 +49,7 @@ def printBraille(text):
                 for k in range(4):
                     filesToConcatenate.append("gcode/space.gcode")
                     i += 1
-                    if (i % 31 == 0):
+                    if (i % 14 == 0):
                         filesToConcatenate.append("gcode/newline.gcode")
                         #j += 1
                         i = 0
