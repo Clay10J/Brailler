@@ -65,7 +65,7 @@ def printBraille(text):
         filesToConcatenate.append("gcode/end.gcode")
         flag = script.makeScript(filesToConcatenate)
         if flag:
-            command = "sudo ../PyCNC/pycnc "+ "../Brailler/script.gcode"
+            command = "sudo ../../PyCNC/pycnc "+ "script.gcode"
             os.system(command)
             print("Finished Printing. Waiting on new command...\n")
         else:
